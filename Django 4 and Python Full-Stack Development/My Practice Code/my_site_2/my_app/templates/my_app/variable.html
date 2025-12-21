@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-->The | is used for filters and there are lots of them which can be found on Django Page
+    https://docs.djangoproject.com/en/5.2/ref/templates/builtins/#built-in-filter-reference <-->
+    <!--> Anything inside double braces is a variable from python whose value will be displayed<-->
+    <!--> Anything inside double braces with double percent symbol is a tag <-->
+    <h1>Variable.html</h1>
+    <h2>Her First name was {{first_name | capfirst}} and her Last name was {{last_name | capfirst}}</h2>
+    <h2>Her First name was {{first_name | length}} and her Last name was {{last_name | lower| capfirst}}</h2>
+    <h3>{{some_list}}}</h3>    
+    <h3>{{some_list.1}}</h3>
+    <h4>My List</h4>
+    {% for item in some_list %}
+        <h5>{{item}}</h5>
+    {% endfor %}
+    <h3>{{some_dict}}</h3>
+    <h3>{{some_dict | upper}}</h3>    
+    <h4>{{date|date:"d M Y"}}</h4>
+    <h3>{{some_dict.inside_key}}</h3>
+    {% if user_logged_in %}
+        <h3>You Are Logged In. So You See A List</h3>
+        <h4>My List Type 2</h4>
+        <ul>
+        {% for item in some_list %}
+            <li>{{item}}</li>
+        {% endfor %}   
+        </ul> 
+    {% else %}   
+        <h3>You are not logged in. So check this Dictionary Example</h3>
+        <ol>
+        {% for key, value in some_dict.items %}
+            <li>{{key}} and {{value}}</li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+    <h2>{# This is a Comment #}</h2>
+</body>
+</html>

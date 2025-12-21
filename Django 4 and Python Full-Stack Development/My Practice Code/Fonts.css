@@ -1,0 +1,27 @@
+body{
+    font-family:"Moo Lah Lah";
+    font-size: 60%
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+p{
+    font-size: 3.5em
+}
+
+#Up{
+    text-align: center;
+    border: 10px solid blue;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+#Down{
+    text-align: center;
+    border: 10px solid red;
+    padding-top: 40px;
+    margin: 50px
+}

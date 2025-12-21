@@ -1,0 +1,16 @@
+.myDivClass{
+    color: red;
+}
+
+.myDivClass2{
+    color: blue;
+}
+
+#above{
+    color: aquamarine;
+    background-color: black;
+}
+
+#below{
+    color:blueviolet;
+}
