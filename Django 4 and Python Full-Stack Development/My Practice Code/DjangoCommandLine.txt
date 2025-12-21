@@ -1,0 +1,14 @@
+django-admin startproject site_name
+
+site_name>python manage.py startapp app_name
+
+Set up the app_name urls.py and views.py and also set up site_name urls.py (and views.py if any)
+
+site_name>python manage.py migrate
+
+Create the entry for INSTALLED_APPS from the apps.py file for app_name inside the settings.py file
+
+site_name>python manage.py make_mirgations app_name  --- if no models it will say no changes detected in my_app
+
+site_name>python manage.py migrate --- if no models, it will tell no migrations to apply after execution
+
