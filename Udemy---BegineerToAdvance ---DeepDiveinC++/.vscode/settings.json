@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "charconv": "cpp",
+        "xmemory": "cpp",
+        "xstring": "cpp"
+    }
+}
