@@ -1,0 +1,35 @@
+********* TS Compile and Run the JS****************
+
+npx tsc <TsScript>  // Gets the JS script
+
+node <JsScript> // Runs the JS code in browser
+
+
+********** TS config *************
+
+{
+  "compilerOptions": {
+	.... 
+	....
+	.
+	.
+	
+	
+	 /* Language and Environment */
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+	
+	
+	 /* Modules */
+	 "module": "es6" /* Specify what module code is generated. */,  //This or any ES*** is needed if you also want JS to use the ES6 module syntax for browser code
+	 ...
+	 ...
+	 "outDir": "./dist" /* Specify an output folder for all emitted files. */,
+	.
+	.
+	.
+	....
+  },
+  "include": ["src"]
+}
+
+if "module": "commonjs" then it uses the browser javascript
