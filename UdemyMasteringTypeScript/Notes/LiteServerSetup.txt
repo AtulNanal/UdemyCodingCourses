@@ -1,0 +1,14 @@
+****************Set Up Live Server********************
+Useful for live browser sync of 
+
+npm install lite-server 
+
+npm init -y  //Creates package.json 
+
+//package.json --> scripts
+  "scripts": {
+    "start": "lite-server"
+  },
+  
+npm start // start the project in browser --- browser sync live compile / update
+
