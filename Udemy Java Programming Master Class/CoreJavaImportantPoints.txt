@@ -1,0 +1,42 @@
+Udemy Java Programming Master Class
+
+Rule no 1 : If you have public class in your file, the name of the file must match with the name of the public class
+Rule no 2 : Public class of the source file must have a Main method. In a project atleast one main method needs to be in a public class. 
+Rule no 3 : There can be only one public class per source file
+Rule no 4 : Package statement should be first line of the source file
+Rule no 4.5 : When no class access-modifier is specified, it means it is default which means class accesible anywhere from its own package. 
+Rule no 5 : If class is public then its accessible from even other packages, but still you need an import statement for the same. Import statements must be placed after the package stament and before the class. 
+Rule no 6 : When members of a class do not have access modifiers specified then also its considered default i.e. accessible only from within the package. If you want to access them in other packages whrere this package is imported, the members should be declared as public. 
+Rule no 7 : Java APIs ---> Java libraries containing multiple packages. 
+https://docs.oracle.com/javase/8/docs/api/?.html
+Rule no 8 : Final is an access modifier for classes variables in Java. They are like const variables in C#. You cannot decalare final variable without assigning its value. It can also be used to make a function not overridable in child class and it can also be used to make the class no derivable further. 
+Rule no 9 : Transient is an access modifier for class variables which tells that this variable is not available for Serialixation / De-serialization. When a class object containing a transient variablei id serialized, it will store defailt value in the variable. 
+Rule no 10 : Volatile is an access modifier for class variables which tells this variable is thread safe i.e. multiple threads can use this variable simultaneously without any problem. When a modifier transient is added, we cannot add final to the same variables.
+Rule no 11 : Non short circuit operators in Java i.e. & and | also work like short circuit operators && and ||. Only difference is that they will evaliate both sides of the equation before evaluating the whole expression.
+Rule no 12 : "Final" modifier for a class method means that the method cannot be overridden in any sub classes. And for the class it means that class cannot be inherited futher.
+Rule no 13 : "Synchronized" modifier for a method means only one thread can use this method at a specific time. Other threads will wait for the current trhead to come out of this method.
+Rule no 14 : "Strictfp" modifier for a method to restrict floating point calculations on every platform and enure the same result eveywhere. This modiifer can be used only for class, method and interfaces.
+Rule no 15 : "Native" modifier for a method is used to indicate that the method is implemented using native code (e.g. C/C++) using JNI (Java Native Interface)
+Rule no 16 : The only way to call a constructor is from another constructor using super() or this()
+Rule no 17 : If parent class does not have a default constructor, but has a contructor with arguments, you should call this constructor with arguments using the super keyword from derived class constructor.
+Rule no 18 : When constructor is public and class is public, then any class can create object of that class. Even classes belonging to different package can create objects of this class.
+Rule no 19: : When constructor is protected, then only classes from same package or child classes from other packages can create objects of this class.
+Rule no 20 : When constructor is default, then only classes from same package can create ojects of this class.
+Rule no 21 : When constructor is protected, only methods from this class can create objects of this class. Used in creatng singletopn class.
+Rule no 22 : Static keyword can be used for Block, Varibles, Methods and Inner class
+Rule no 23 : A static nested class may be instantiated without its outer class.
+Rule no. 24: Inner classes can access both static and non-static members of outer class. A static inner class can only access static members of outer class.
+Rule no 25 : IN Java its not necessary to use the "override" keyword for overridden implementation of a Super class method in child class. 
+Rule no 26 : In Java interfaces can have only method definitions and they all must have keyword abstract i.e. abstract methods Thus all classes that implement the interface must implement these abstract methods.
+Rule no 27 : IN Java, interface variables MUST always be public static final. i.e. they are all class level variables and are final i.e. the values cannot change.
+Rule no 28 : You can create an interface variable but cannot create an instance of interface and assign to it. You can assign an instance of a class object that implements an interface.
+Rule no 29 : Interface can extend from another interface.
+Rule no. 30 : "Default" method in interface is a method that whose implementation is present in the interface itself. Java 8 onwards only. This helps in adding new methods in the interface, which need no be implemented in each class. 
+Rule no 31 : If a class inherits from two interfaces, and both have a default methods with same name and signaure, then we need to implement the default method in the class and tell explicitly which default method is to be called. <interfaeName>.Super().<MethodName>
+Rule no. 32 : An abstract class has atleast one method as abstract and other methods can have implementations. Like interface we cannot create instance of an abstract class. Like interfaces, we can create a variable of abstract class and assign a object of a class which extends the abstract class.
+Rule no 33 : A string object created and initialized with string literal will have its memory in string pool which is part of the heap. All string literals in the program are placed in this heap. So another string object that also initializes with same string literal will point to same location. 
+Rule no 34 : Java stinrgs are immutable, so when a string class function like concat is invoked for a string, a new concatenated string is created, but reference points to older un concatenated string only.
+Rule no 35 : String Buffer and String Builder are mutable string implementations in Java. IN both these classes any member function invokation changes the object itself rather than creating a new object. String Buffer is thread safe meaning that at a time only one thread can access it. Sting Builder is not Thread safe and so faster than String buffer.
+Rule no 36 : User defined custom exceptions MUST extend the exception class always. The exception is thrown using the throw keyword and we must be handle the exception in the code. 
+Rule no. 37 : IF a class needs to be serialized / deserealized, it needs to implement java.io.serializable interface. If parent class has implemented this interface, then child class need not implement this interface.
+Rule no. 38 : Only non-static data members will be serialized during Serializatrion process. Static and Transient data members will not be serialized in the Serialization process. During the Serialization Process, Transient Values are marked default and serialized.
